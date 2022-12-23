@@ -15,7 +15,6 @@
             <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
             <a href="experience.html" class="w3-bar-item w3-button">Experience</a>
             <a href="misc_projects.html" class="w3-bar-item w3-button">Misc Projects</a>
-            <a href="games.html" class="w3-bar-item w3-button">Game Projects</a>
         </div>
     </div>
 </div>
@@ -33,6 +32,8 @@
 
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
+
+
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
       Since the beginning of fall 2020, I’ve been working at the Formal Analysis of Interactive Media (FAIM) Lab at Pomona College,
@@ -73,6 +74,121 @@
   </div>
 
   <hr>
+
+  
+  <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Game Projects</h1>
+  <p>
+    During spring 2022, I was in a game engine programming class at Pomona College. Most game design takes place
+    in pre-built engines, which deal with low-level details such as basic physics, lighting, collisions, etc. (such as the Unity
+    or Unreal engines). However, in this class we were assigned to create a 2d-graphics engine and game, and a 3d game based on
+    the bare-bones Frenderer engine (created by Professor Joseph Osborn). Both games were created in teams of 3, and we had a lot of fun
+    putting them together. Following are samples of both games: <b>Triumvirate Arena</b> and <b>JumpyBall</b>!
+  </p>
+
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Triumvirate Arena</h2>
+  <p>
+      Triumvirate Arena is a battle card game featuring three players: Nate, Chloe, and Grace. Each player type has three
+      signature moves which might increase or decrease your health/mana, and/or do damage to the other player. The goal of
+      this two player game is to reduce the opponent to zero health.
+  </p><p>
+      We wrote Triumvirate Arena in Rust. And we did it from scratch, without a pre-made game engine. In our team of 3 (myself, Chloe,
+      and Grace), I worked on gameflow mechanics (health/mana interactions, turn taking), player moves, and creating original music,
+      while my partners worked on other various mechanics and graphics. 
+  </p>
+  <p>
+      <img src="https://media.giphy.com/media/HGYiv56I6W1ADz2wTC/giphy.gif" alt="gameflow gif" width="40%">
+  </p>
+  <p>
+      <a href="https://github.com/awu512/jumpyball">Click here for the Triumvirate Arena repository,</a>
+      in order to see the code and more gameplay examples!
+  </p>
+  <br>
+  <p>
+      <b>Features:</b>
+      <ul>      
+          <li>Two player turn taking</li>
+          <li>Choose player</li>
+          <li>Choose move</li>
+          <li>Animated health bars</li>
+          <li>Fonts + text writing</li>
+          <li>Bitblt images</li>
+          <li>Original music</li>
+          <li>Sound effects for selecting moves, players, etc.</li>
+          <li>Main/end screen</li>
+          <li>Get info screens for players and moves</li>
+          <li>Health and mana tracking (generation and subtraction moves)</li>
+          <li>Health and mana requirements for moves</li>
+      </ul>
+  </p>
+
+  <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">JumpyBall</h2>
+
+  <p>
+      JumpyBall is a 3D parkour game. The player navigates through levels by jumping across platforms, avoiding the ground,
+      and working their way to the end gem.
+  </p><p>
+      While Triumvirate Arena was created from scratch, JumpyBall was created with the help of the Frender game engine (created
+      by Professor Joseph Osborn), which assisted with the 3D rendering. We were left to create the physics, collision system, 
+      assets, and more. 
+  </p><p>
+      In JumpyBall, I primarily worked on asset creation and the collision system. I created all of the 3D models in Blender 
+      and also wrote a Python script in Blender to determine the bounding boxes for each object (the core of our collision system).
+  </p>
+
+  <a href="https://drive.google.com/file/d/1WljebXzAUqqOxfEGqObrkWqc_t6K4UZx/preview"><b>Click here to see the JumpyBall trailer!</b></a><br>
+  
+  <br>
+  <a href="https://github.com/awu512/jumpyball">Click here for the JumpyBall repository!</a><br>
+  <br>
+
+  <img class="w3-hide-small" src="images/jumpyball1.png" alt="Image" width="25%" height="25%">
+  <img class="w3-hide-small" src="images/jumpyball2.png" alt="Image" width="25%" height="25%">
+
+  <p>
+      <br>
+      <b>Features</b>:
+      <ul>
+          <li><u>Rolling</u></li>
+          <ul>
+              <li>Mid air rolling</li>
+              <li>Roll while jumping</li>
+          </ul>
+          <li><u>Jumping (Double jump!)</u></li>
+
+          <li><u>Collision</u></li>
+              <ul>
+                  <li>Bounding boxes for every object in scene, created via Blender Python script</li>
+                  <li>AABB-Sphere collision</li>
+              </ul>
+          <li><u>Camera</u></li>
+          <ul>
+              <li>Mouse responsive camera</li>
+              <li>Mouse responsive out of window</li>
+          </ul>
+          <li><u>Level Switching</u></li>
+          <ul>
+              <li>Switch between levels (and beat the game) by collecting gems</li>
+              <li>Level restart when player falls</li>
+          </ul>
+          <li><u>Modeling</u></li>
+          <ul>
+              <li>Made-from-scratch 3d models of ball, landing objects, and world</li>
+          </ul>
+          <li><u>Textures</u></li>
+          <ul>
+              <li>Cosmetic map textures (ex. Lava ground, space sphere)</li>
+              <li>Ball texture (the Death Star!)</li>
+              <li>Landing object textures (pillars and cubes)</li>
+          </ul>
+          <li><u>Music</u></li>
+          <ul>
+              <li>Original JumpyBall music!</li>
+          </ul>
+
+      </ul>
+      
+  </p>
+
 
   <img src="images/Damage-Extra_1024x1024.jpg" alt="Damage-Extra_1024x1024.jpg" width="100%">
   <!-- About Section -->
@@ -152,7 +268,6 @@
     <a href="about_me.html" class="w3-button" style="border:2px solid rgb(252, 201, 32);">About Me</a>
     <a href="experience.html" class="w3-button" style="border:2px solid rgb(163, 64, 255);">Experience</a>
     <a href="misc_projects.html" class="w3-button" style="border:2px solid rgb(255, 70, 101);">Misc. Projects</a>
-    <a href="games.html" class="w3-button" style="border:2px solid rgb(87, 124, 247);">Game Projects</a>
   </div>
 </footer>
 
