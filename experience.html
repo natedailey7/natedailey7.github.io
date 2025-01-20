@@ -37,54 +37,76 @@
     <p>
       <img src="images/DCR/DCR_logo.jpg" alt="DSM" width="19%"><br><br><br>
       <u>August 2022 - Present</u>
-      <ul>      
+      <ul>
         <li>
-          Created computer vision model in Python to map vegetation based on aerial imagery.<br><br>
-          <img src="images/DCR/gpine_neural_net_training.gif" alt="neural net gif" width="29%">
-          <p><small>- Namely, I created a convolution neural network to identify gray pines with the package <a href="https://github.com/azavea/raster-vision">Raster Vision</a> (++ PyTorch, Faster R-CNN).
-            <br>- Gray pines are often an indicator of fire hazard in the California Central-Valley Foothills; thus deserving focus.</small></p>
-          <br>  
-          <img src="images/DCR/gpine_boxes.gif" alt="gpine boxes" width="32%">
-          <!-- <img src="images/gpine_classifier_example.gif" alt="gray pine classifier" width="32%"> -->
-          <img src="images/DCR/object_detection_2.gif" alt="gpine boxes 2" width="34%">
-
-        </li><br>
+          Developed computer vision model in Python to identify hazardous parcels from roadside imagery,
+          aiding evacuation planning and vegetation management in wildfire-prone areas of Northern California.<br><br>
+          <img src="images/DCR/parcels_example_2.png" alt="parcel classification example" width="50%">
+          <p><small>
+            <ul>
+              <li>Photos are collected automatically from cameras mounted to the side of a car.</li>
+              <li>Each photo is automatically classified into a category using PyTorch.</li>
+              <li>Photos are assigned to parcels using geotag data.</li>
+              <li>Distribution of classifications are used to plan for vegetation management
+                and outreach to prepare for wildfire.</li>
+            </ul>
+          </small></p>
+        </li><br> 
         <li>
-          Automated raster process for wildfire model (++ R, LiDAR, FLAMmap).<br><br>
+          Built an AWS-based workflow to access USGS LiDAR data and generate raster inputs for wildfire model.<br><br>
           <img src="images/DCR/flam_map.png" alt="flam_map" width="25%">
           <img src="images/DCR/DCR_2.png" alt="DSM" width="16%">
           <img src="https://media0.giphy.com/media/eEkOZoX0e3aeaJvoIR/giphy.gif" alt="lidar gif" width="30%">
-          <p><small>- Script automates the process of calculating, resampling and assembling inputs.
-            <br>- This was previously done one-by-one.
-            <br>- Shown in figure below.</small></p>
+          <p><small>
+            <ul>
+              <li>Script automates the process of calculating, resampling and assembling rasters.</li>
+              <li><b>Inputs</b>: LiDAR point cloud.
+              <b>Outputs</b>: Elevation, Slope, Aspect, Canopy Cover, Canopy Height, Crown Base Height, Crown Bulk Density.</li>
+            </ul>
+            </small></p>
           <img src="images\DCR\flammmap_desc.png" alt="flammap_desc" width="30%">
         </li><br>
+
+        <li>
+          Developed a convolutional neural network in Python to map aerial imagery (PyTorch, Raster Vision, Faster R-CNN).<br><br>
+
+          <ul>
+            <li>
+            <p>Implemented gray pine classifier. Gray pines are often an indicator of fire hazard in the California Central-Valley Foothills, thus deserving focus.</p>
+            <br>  
+            <img src="images/DCR/gpine_boxes.gif" alt="gpine boxes" width="32%">
+            <!-- <img src="images/gpine_classifier_example.gif" alt="gray pine classifier" width="32%"> -->
+            <img src="images/DCR/object_detection_2.gif" alt="gpine boxes 2" width="34%">
+            </li>
+          <br>
+          <li>
+            Implemented building classifier (Resnet-18).<br>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTFuYTlqb3A1OXNkcjF2dzcwcTBvcG1qZ2lzeHY4cjNtdDlyb3djMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ClgOqQUHeAbtH6Xfu7/giphy.gif" alt="lidar gif" width="30%">
+          </li>
+          </ul>
+
+        </li><br>
+
         <li>
           Identified hazardous evacuation routes in Tehama County.<br><br>
           <img src="images/DCR/roads.png" alt="roads" width="20%">
           <img src="images/DCR/heat_map.png" alt="heat_map" width="20%">
           <img src="images/DCR/tehama evac routes detailed.png" alt="evac routes" width="20%">
-          <p><small>- Identified road segments at highest risk during evauation from wildfire.  
-            <br>- Used combination of field work and GIS.</small></p>
+          <p><small>- Using a combination of field work and GIS, identified road segments at highest risk during evauation from wildfire.</small>
           <br>
         </li><br>
-        <li>
-          Created building classifier using a convolutional neural network.<br>
-          <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTFuYTlqb3A1OXNkcjF2dzcwcTBvcG1qZ2lzeHY4cjNtdDlyb3djMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ClgOqQUHeAbtH6Xfu7/giphy.gif" alt="lidar gif" width="30%">
-          <!-- <img src="images/DCR/SMD_buidling_classification_short.gif" alt="building classfier" width="30%"> -->
-          <p><small>- (++ Python, Raster Vision, Resnet-18)</small></p>
-        </li>
+        
         <li>
           Achieved certifications for/participated in prescribed burns.<br><br>
           <img src="images/DCR/upper_park_burn.JPG" alt="field work" width="26%">
           <img src="images/DCR/upper_park_burn_still.png" alt="prescribed burn" width="15%"><br>
         </li><br>
-        <li>Maintained system infrastucture for DCR office and mobile mapping workstations.<br>
+        <li>Managed office IT infrastructure, including a local file server, Google Workspace, and mobile mapping workstations.<br>
           <img src="images/DCR/nate in maple.jpg" alt="Maple" width="14%">
           <img src="images/DCR/IT.png" alt="IT" width="35%"><br><br>
 
         </li>
-        <li><a href="http://www.deercreekgis.com/">DCR Wesbite</a></li>
+        <li><a href="http://www.deercreekgis.com/">DCR Website</a></li>
         <!-- <li>
           Intern during <i>August 2022 - May 2023</i> and part-time <i>June 2023 - present</i>
         </li> -->
@@ -142,7 +164,7 @@
       <!-- <p><small><u>Skills</u>: Python, Coq, Java</small></p> -->
       <img src="images/cs54_screenshot.png" alt="cs54" width="35%">
       <img src="images/QSC.png" alt="QSC" width="25%">
-      <p><small><u>Above</u>: Example of coursework that I tutored. A proof in COQ [left] and a mouse-drawn proof (this was during the height of COVID ++ online classes) [right]. 
+      <p><small><u>Above</u>: Example of coursework that I tutored. A proof in COQ [left] and a mouse-drawn proof (this was during COVID ++ online classes) [right]. 
       </small></p>
     </p>
 
@@ -170,17 +192,16 @@
       <u>October 2015 - August 2022</u>
       <ul>      
         <li>Sponsored by <i>Unparalleled Yoyos</i> (previosly <i>YoYoFactory</i> and <i>Chico Yoyo Co.</i>).</li>
-        <li>Designed, prototypde and advertised my 5 signature yoyo models:<ul>
-          <li><a href="https://yoyoexpert.com/blog/new-chico-yoyo-company-lightspeed/">Lightspeed</a></li>
-          <li><a href="https://yoyoexpert.com/blog/new-yoyofactory-b-grade-release-the-d10/">D10</a></li>
-          <li><a href="https://shop.yoyoexpert.com/products/nd-yoyo-by-yoyofactory">ND</a></li>
-          <li><a href="https://en.yoyostorerewind.com/products/nd-ultra">ND Ultra</a></li>
-          <li><a href="https://yoyoexpert.com/blog/yoyofactory-new-release-nate-dailey-signature-bind/">Bind</a></li>
-          <li><a href="https://en.yoyostorerewind.com/products/damage">Damage</a></li>
-          <li><a href="https://shop.yoyoexpert.com/products/nation-yoyo-by-unparalleled?variant=43610559512766">Nation</a></li>
-          </ul>
+        <li>Designed, prototyped and advertised my 5 signature yoyo models:
+          (<a href="https://yoyoexpert.com/blog/new-chico-yoyo-company-lightspeed/">Lightspeed</a>,
+          <a href="https://yoyoexpert.com/blog/new-yoyofactory-b-grade-release-the-d10/">D10</a>,
+          <a href="https://shop.yoyoexpert.com/products/nd-yoyo-by-yoyofactory">ND</a>,
+          <a href="https://en.yoyostorerewind.com/products/nd-ultra">ND Ultra</a>,
+          <a href="https://yoyoexpert.com/blog/yoyofactory-new-release-nate-dailey-signature-bind/">Bind</a>,
+          <a href="https://en.yoyostorerewind.com/products/damage">Damage</a>,
+          <a href="https://shop.yoyoexpert.com/products/nation-yoyo-by-unparalleled?variant=43610559512766">Nation</a>).
 
-      <li>Receivde royalties from sales.</li>
+      <li>Received royalties from sales.</li>
       <li>Fully funded travel to competitions in China, Japan, Iceland, and across the US.</li><br>
       </ul>
       <img src="images/YOYO/on_a_rock.png" alt="yoyo_image" width="38%">
@@ -211,7 +232,7 @@
       <img src="images/cmc.jpg" alt="cmc" width="20%"><br><br>
       <u>May 2021 - August 2021</u>
       <ul>      
-        <li>Employed to supervise groups of 20 children (ages 3-4) and inspire learning (many were children of my professors!).</li>
+        <li>Employed to supervise groups of 20 children (ages 3-4) and inspire learning.</li>
       </ul>
 
     </p>
@@ -220,7 +241,7 @@
 
     <h5 class="w3-border-bottom w3-border-light-grey w3-padding-16"><p>&#127775;<b> Ted Gleason Award</b></p></h5>
     <p>
-      <ul><li>Community award, presented at Pomona College Graduation 2023. Details 
+      <ul><li>Presented at Pomona College Graduation 2023. Details 
       <a href="https://www.pomona.edu/students/academic-awards-and-distinctions">here</a>.</li></ul>
     </p>
 
