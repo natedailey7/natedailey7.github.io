@@ -35,6 +35,33 @@
 
     <!-- <object type="text/html" data="flappy_js_test/index.html"></object> -->
 
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire Structure Analysis</h1>
+    <p>
+      The Eaton Fire occurred in January 2025 near Altadena, California. The fire destroyed over 9,000 structures, while others in close proximity to the flames
+      remained intact. Our goal for this project was to build a model that predicts whether a structure burned in the 2025 Eaton
+      Fire based on proximity to nearby burned structures and proximity to vegetation.
+    </p>
+    <h2>Feature Engineering</h2>
+    <h3>Proximity to Burned Structures</h3>
+    <p>Ratio of structures in a radius of 20m that burned</p>
+    <img src="images/masters/distance_to_other_structures_20m.png" alt="ratio of structures within 20m that burned" width="45%"><br>
+
+    <h3>Proximity to Vegetation</h3>
+    <p>NDVI Derivation</p>
+    <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="45%"><br>
+    <p>Calculate the distance between each structure and an NDVI betweenm 0.3 and 0.8.</p>
+      <ul>
+        <li>An NDVI between 0.3 and 0.8 tends to represent brush and trees.</li>
+      </ul>
+    <img src="images/masters/ndvi_distance.png" alt="ndvi distance calculation" width="25%"><br>
+    <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8.</p>
+    <img src="images/masters/mean_ndvi_distribution.png" alt="mean ndvi distribution" width="45%"><br>
+    <h3>Results</h3>
+    <p>Logistic Regression</p>
+    <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
+    <p>XG Boost</p>
+    <img src="images/masters/shap-plot.png" alt="shap plot" width="45%"><br>
+
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
       Fall 2020-May 2021, I worked at the <i>Formal Analysis of Interactive Media (FAIM) Lab</i> at Pomona College.
