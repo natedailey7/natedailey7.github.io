@@ -13,7 +13,7 @@
         <!-- Float links to the right. Hide them on small screens -->
         <div class="w3-right w3-hide-small">
             <a href="experience.html" class="w3-bar-item w3-button">Experience</a>
-            <a href="about_me.html" class="w3-bar-item w3-button">About Me</a>
+            <!-- <a href="about_me.html" class="w3-bar-item w3-button">About Me</a> -->
             <a href="misc_projects.html" class="w3-bar-item w3-button">Projects</a>
         </div>
     </div>
@@ -34,6 +34,92 @@
   <div class="w3-container w3-padding-32" id="about">
 
     <!-- <object type="text/html" data="flappy_js_test/index.html"></object> -->
+
+    
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Raster-Based Wildfire Risk Model in Python</h1>
+    <p>
+      My master's project is to create a scriptable wildfire model built in Python which calculates rate of spread, fireline intensity, and flame length in a given geographic area.
+      This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
+      <br><small>Timeline: Project to be executed before 2026.</small>
+
+      <!-- <img src="images/masters/python-logo.png" alt="Python Logo" width="10%"> -->
+    </p>
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Motivation</h3>
+    <ul>
+      <li>Wildfires in the U.S. are getting more severe and frequent.</li>
+      <li>In areas like Los Angeles, fires have already destroyed thousands of structures just this year.</li>
+      <li>The wildland-urban interface (WUI)—where homes meet wildlands—is growing fast. Over 44 million homes are now located in fire-prone WUI areas.</li>
+    </ul>
+    
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pre-fire planning</h3>
+    <ul>
+      <li>Identifying hazardous areas for treatment is essential to reducing wildfire risk.</li>
+      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (mechanical thinning, prescribed burns).</li>
+    </ul>
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Existing Tools</h3>
+    <ul>
+      <li>FlamMap and FARSITE
+        <ul>
+          <li><b>FlamMap</b>: Calculates fire behavior under static conditions.</li>
+          <li><b>FARSITE</b>: Simulates dynamic fire spread over time.</li>
+        </ul>
+      </li>
+      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (Mechanical thinning, prescribed burns).</li>
+    </ul>
+
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">My Solution</h3>
+    <p>A scriptable wildfire model built in Python which calculates rate of spread, fireline intensity, and flame length for each pixel.</p>
+    <img src="images/masters/stacked-raster-example.png" alt="stacked raster example" width="20%">
+    <br><small>Example of a stacked raster representing terrain (Finney 2006).</small>
+    <br><br>  
+  </h3>
+    <p>
+      <br>
+      <b>Inputs</b>:
+      <ul>
+      <li>Fuel model raster</li>
+      <li>Slope raster</li>
+      <li>Wind speed</li>
+      <li>Wind direction</li>
+      <li>Fuel moisture.</li>
+      </ul>
+      <b>Outputs</b>:
+      <ul>
+      <li>Rate of Spread (m/min)</li>
+      <li>Fireline Intensity (kW/m)</li>
+      <li>Flame Length (m)</li>
+      </ul>
+    </p>
+    <h3>Project Plan</h3>
+    <ul>
+    <li>Build a fuel model lookup system (Scott & Burgan 2005).
+      <ul>
+        <li>Fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
+        <li>
+          <small>Fuel model examples (from Scott & Burgan 2005):</small><br>
+          <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
+          <img src="images/masters/scott-burgan-2.png" alt="scott-burgan-2" width="25%"><br><br>
+        </li>
+      </ul>
+    <br>
+
+    </li>
+    <li>Implement Rothermel (1972) and Byram (1959) equations in Python.
+      <ul>
+        <li><small>Rothermel outputs: rate of spread</small></li>
+        <li><small>Byram outputs: fireline intensity and flame length</small></li>
+      </ul>
+    </li>
+    <li>Test model and compare results to FlamMap and FARSITE.</li>
+    <li>Collect fuel and LiDAR data for testing.</li>
+    <li>Possibly expand on model to include outputs like Crown Fire Potential, Fireline Intensity, etc.</li>
+    </ul>
+
+    <hr>
+    <h3><i>Other projects</i>:</h3>
+    <hr>
 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire Structure Analysis</h1>
     <p>
@@ -170,12 +256,12 @@
           <li>Textures</li>
           <ul>
               <li>Cosmetic map textures (ex. Lava ground, space sphere)</li>
-              <li>Ball texture (the Death Star!)</li>
+              <li>Ball texture (the Death Star)</li>
               <li>Landing object textures (pillars and cubes)</li>
           </ul>
           <li>Music</li>
           <ul>
-              <li>Original JumpyBall music!</li>
+              <li>Original JumpyBall music</li>
           </ul>
 
       </ul>
@@ -213,24 +299,16 @@
   <img src="images/LiDAR_abstract.png" alt="LiDAR_abstract" width="40%" class="center">
   <br><br><br>  
 
-
-<!-- <div class="w3-container w3-padding-32" id="about"> -->
-  <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Esri Developer Summit</h1>
-  <p>
-    In March 2023, I was selected as a student assistant at the <a href=https://www.esri.com/en-us/about/events/devsummit/overview?gclid=CjwKCAjw17qvBhBrEiwA1rU9w-5ydvJ1Fk7VRzkjFsx7gW40ZMvFIr2Oly64HSQtYaz7pdgdUBFCQxoCACQQAvD_BwE&aduc=Advertising&sf_id=7015x000000va2mAAA&adut=ppcbrand&aduco=digitalaccess_details&aduca=EDeveloperSummit24&utm_id=7015x000000va2mAAA&adum=PPC&utm_campaign=EDeveloperSummit24&adusf=Google&utm_source=Advertising&utm_medium=PPC&ef_id=CjwKCAjw17qvBhBrEiwA1rU9w-5ydvJ1Fk7VRzkjFsx7gW40ZMvFIr2Oly64HSQtYaz7pdgdUBFCQxoCACQQAvD_BwE:G:s&s_kwcid=AL!8948!3!690788273277!p!!g!!esri%20developer%20summit&_bk=esri%20developer%20summit&_bt=690788273277&_bm=p&_bn=g&_bg=155711341101&aducop=esri%20developer%20summit-p&gclsrc=aw.ds&gad_source=1>Esri Developer Summit</a>,
-    in Palm Springs, CA, where I attended sessions and learned about new GIS-related Python and Javascript
-    tools.
-  </p>
-
 <hr>
 
-<!-- Music Section -->
+<!-- 
+Music Section
 <div class="w3-container w3-padding-32" id="about">
   <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Music</h1>
   <br><img src="images/shredding.jpg" alt="shredding" width="30%">
   <br><br>
   <iframe width="30%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1052415673&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/natedailey" title="Nate Dailey" target="_blank" style="color: #cccccc; text-decoration: none;">Nate Dailey</a> · <a href="https://soundcloud.com/natedailey/sundown" title="Sundown" target="_blank" style="color: #cccccc; text-decoration: none;">Sundown</a></div>  
-  <!-- <iframe width="30%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1409177449&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/natedailey" title="Nate Dailey" target="_blank" style="color: #cccccc; text-decoration: none;">Nate Dailey</a> · <a href="https://soundcloud.com/natedailey/hive-performance-live" title="Hive Performance (live)" target="_blank" style="color: #cccccc; text-decoration: none;">Hive Performance (live)</a></div> -->
+  <iframe width="30%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1409177449&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/natedailey" title="Nate Dailey" target="_blank" style="color: #cccccc; text-decoration: none;">Nate Dailey</a> · <a href="https://soundcloud.com/natedailey/hive-performance-live" title="Hive Performance (live)" target="_blank" style="color: #cccccc; text-decoration: none;">Hive Performance (live)</a></div>
   <iframe width="30%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1291310566&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/natedailey" title="Nate Dailey" target="_blank" style="color: #cccccc; text-decoration: none;">Nate Dailey</a> · <a href="https://soundcloud.com/natedailey/voice-memo" title="Voice Memo" target="_blank" style="color: #cccccc; text-decoration: none;">Voice Memo</a></div>  
   <iframe width="30%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/931242781&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/natedailey" title="Nate Dailey" target="_blank" style="color: #cccccc; text-decoration: none;">Nate Dailey</a> · <a href="https://soundcloud.com/natedailey/some-ideas-1" title="Too much wah" target="_blank" style="color: #cccccc; text-decoration: none;">Too much wah</a></div>
 </div>
@@ -251,20 +329,19 @@
   <img src="images/art/motorcycle.png" alt="motorcycle" width="16%">
   <br>
 
-</div>
+</div> -->
 
-
+<!-- 
 <div class="w3-container w3-padding-32" id="about">
 
   <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">World Yoyo Championships</h1>
   <p>Link to my performance <a href="https://www.youtube.com/embed/jSnjTZo RWjI">here</a>.</p>
   <br>
-  <!-- <iframe width="840" height="472.5" src="https://www.youtube.com/embed/jSnjTZo RWjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
-  <!-- <img src="images/YOYO/worlds 2019 results.png" alt="worlds results" width="40%"> -->
-</div>
-
+  <iframe width="840" height="472.5" src="https://www.youtube.com/embed/jSnjTZo RWjI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img src="images/YOYO/worlds 2019 results.png" alt="worlds results" width="40%">
+</div>-->
+<div id="animation_yoyo"></div>
 <br><br>
-
 
 <!-- End page content -->
 </div>
@@ -274,7 +351,7 @@
 <footer class="w3-center w3-black w3-padding-16">
   <div>
     <a href="experience.html" class="w3-button" style="border:2px solid rgb(163, 64, 255);">Experience</a>
-    <a href="about_me.html" class="w3-button" style="border:2px solid rgb(252, 201, 32);">About Me</a>
+    <!-- <a href="about_me.html" class="w3-button" style="border:2px solid rgb(252, 201, 32);">About Me</a> -->
     <a href="misc_projects.html" class="w3-button" style="border:2px solid rgb(255, 70, 101);">Projects</a>
   </div>
 </footer>
