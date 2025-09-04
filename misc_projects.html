@@ -40,7 +40,7 @@
     <p>
       My master's project is to create a scriptable wildfire model in Python which calculates rate of spread, fireline intensity, and flame length in a given geographic area.
       This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
-      <br><small>Timeline: Project to be executed before 2026.</small>
+      <br><small>Timeline: Project to be completed before 2026.</small>
 
       <!-- <img src="images/masters/python-logo.png" alt="Python Logo" width="10%"> -->
     </p>
@@ -73,7 +73,6 @@
     <p>A scriptable wildfire model built in Python which calculates rate of spread, fireline intensity, and flame length for each pixel.</p>
     <img src="images/masters/stacked-raster-example.png" alt="stacked raster example" width="20%">
     <br><small>Example of a stacked raster representing terrain (Finney 2006).</small>
-    <br><br>  
   </h3>
     <p>
       <br>
@@ -98,7 +97,7 @@
       <ul>
         <li>Fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
         <li>
-          <small>Fuel model examples (from Scott & Burgan 2005):</small><br>
+          Fuel model examples from Scott & Burgan 2005:<br>
           <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
           <img src="images/masters/scott-burgan-2.png" alt="scott-burgan-2" width="25%"><br><br>
         </li>
@@ -114,7 +113,7 @@
     </li>
     <li>Test model and compare results to FlamMap and FARSITE.</li>
     <li>Collect fuel and LiDAR data for testing.</li>
-    <li>Extension: expand on model to include outputs like Crown Fire Potential, Fireline Intensity, etc.</li>
+    <li>Extension: expand on model to include outputs like crown fire potential, fireline intensity, etc.</li>
     </ul>
 
     <hr>
@@ -125,16 +124,16 @@
     <p>
       The Eaton Fire occurred in January 2025 near Altadena, California. The fire destroyed over 9,000 structures, while others in close proximity to the flames
       remained intact. Our goal for this project was to build a model that predicts whether a structure burned in the 2025 Eaton
-      Fire based on proximity to nearby burned structures and proximity to vegetation.
+      Fire based on proximity to nearby burned structures and proximity to vegetation. This project was inspired by the study of Knapp et al. (2021), which analyzed housing arrangement and structure loss in the 2018 Camp Fire.
     </p>
     <h2>Feature Engineering</h2>
     <h3>Proximity to Burned Structures</h3>
     <p>Ratio of structures in a radius of 20m that burned:</p>
-    <img src="images/masters/burned proportion 20m map - edit.png" alt="ratio of structures within 20m that burned map" width="45%">
-    <img src="images/masters/burned proportion 20m hist.png" alt="ratio of structures within 20m that burned histogram" width="45%"><br>
+    <img src="images/masters/burned proportion 20m map - edit.png" alt="ratio of structures within 20m that burned map" width="40%">
+    <img src="images/masters/burned proportion 20m hist.png" alt="ratio of structures within 20m that burned histogram" width="40%"><br>
     <p>Ratio of structures in a radius of 50m that burned:</p>
-    <img src="images/masters/burned proportion 50m map.png" alt="ratio of structures within 50m that burned map" width="45%">
-    <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="45%"><br>
+    <img src="images/masters/burned proportion 50m map.png" alt="ratio of structures within 50m that burned map" width="40%">
+    <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="40%"><br>
 
     <h3>Proximity to Vegetation</h3>
     <p><b>Step 1</b>:NDVI Derivation</p>
@@ -151,24 +150,30 @@
         </li>
         
       </ul>
+    <br>
+    Example for calculating the distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
+    <br>
     <img src="images/masters/ndvi_distance - 2.png" alt="ndvi distance calculation" width="25%"><br>
-    <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8.</p>
-    <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="45%">
-    <img src="images/masters/avg dist to ndvi hist.png" alt="mean ndvi distribution histogram" width="45%"><br>
+    <ul>
+      <li>We calculated both the minimum distance for each polygon, and the average distance for all points on the polygon.</li>
+    </ul>
+    <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8:</p>
+    <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="40%">
+    <img src="images/masters/avg dist to ndvi hist.png" alt="mean ndvi distribution histogram" width="40%"><br>
     <h3>Results</h3>
-    <p>Logistic Regression</p>
+    <p><b>Logistic Regression</b></p>
     <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
     <small>60.9% accuracy, and 0.721 F1-score.<br>
       Strongest predictor: NDVI minimum distance. 
     </small>
     </b>
-    <p>XG Boost</p>
+    <p><b>XG Boost</b></p>
     <img src="images/masters/shap-plot.png" alt="shap plot" width="45%"><br>
     <small>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
       Strongest predictor: NDVI mean distance. 
     </small><br><br>
     This project provided an initial look at potential factors related to the 2025 Eaton Fire.
-    Future work could expand the analysis by incorporating additional distance thresholds, as well as examining building materials and wind patterns.
+    Future work could expand the analysis by trying different models, incorporating additional distance thresholds, or examining building materials and wind patterns. Additionally, perhaps the same process could be run for a different wildfire. 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
       Fall 2020-May 2021, I worked at the <i>Formal Analysis of Interactive Media (FAIM) Lab</i> at Pomona College.
@@ -190,7 +195,7 @@
         this two player game is to reduce the opponent to zero health. This project was part of the spring 2022 Game Engine Programming class at Pomona College. 
     </p>
     <p>
-        We wrote Triumvirate Arena in Rust, <b>completely from scratch, without a pre-made game engine</b> (using Bitblt and Vulkan shaders). In our team of 3 (myself, Chloe,
+        We wrote Triumvirate Arena in Rust, completely from scratch, without a pre-made game engine (using Bitblt and Vulkan shaders). In our team of 3 (myself, Chloe,
         and Grace), I worked on gameflow mechanics (health/mana interactions, turn taking); player moves; and creating original music,
         while my partners worked on other mechanics. 
     </p>
@@ -226,8 +231,8 @@
       JumpyBall is a 3D parkour game. The player navigates through levels by jumping across platforms, avoiding the ground,
       and working their way to the end gem.
   </p><p>
-      We used the Frender game engine (created by Professor Joseph Osborn), which assisted with the 3D rendering. <b>We created
-      the physics, collision system and assets from scratch</b>.
+      We used the Frender game engine (created by Professor Joseph Osborn), which assisted with the 3D rendering. We created
+      the physics, collision system and assets from scratch.
   </p><p>
       In JumpyBall, I primarily worked on asset creation and the collision system. I created all of the 3D models in Blender 
       and wrote a Python script to create a set of bounding boxes for objects on the map (used for collision system). This project
@@ -248,7 +253,7 @@
       <br>
       <b>Features</b>:
       <ul>
-          <li>Jumping (double jump!)</li>
+          <li>Jumping (double jump)</li>
           <li>Rolling</li>
           <ul>
               <li>Mid air rolling</li>
@@ -259,11 +264,7 @@
                   <li>Bounding boxes for every object in scene, created via Blender Python script</li>
                   <li>AABB-Sphere collision</li>
               </ul>
-          <li>Camera</li>
-          <ul>
-              <li>Mouse responsive camera</li>
-              <li>Mouse responsive out of window</li>
-          </ul>
+          <li>Camera (mouse responsive out of window)</li>
           <li>Level Switching</li>
           <ul>
               <li>Switch between levels (and beat the game) by collecting gems</li>
@@ -275,15 +276,11 @@
           </ul>
           <li>Textures</li>
           <ul>
-              <li>Cosmetic map textures (ex. Lava ground, space sphere)</li>
-              <li>Ball texture (the Death Star)</li>
+              <li>Cosmetic map textures (ex. lava ground, space sphere)</li>
+              <li>Ball texture</li>
               <li>Landing object textures (pillars and cubes)</li>
           </ul>
-          <li>Music</li>
-          <ul>
-              <li>Original JumpyBall music</li>
-          </ul>
-
+          <li>Music (original JumpyBall music)</li>
       </ul>
   </p>
 
