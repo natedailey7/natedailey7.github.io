@@ -129,19 +129,31 @@
     </p>
     <h2>Feature Engineering</h2>
     <h3>Proximity to Burned Structures</h3>
-    <p>Ratio of structures in a radius of 20m that burned</p>
-    <img src="images/masters/distance_to_other_structures_20m.png" alt="ratio of structures within 20m that burned" width="45%"><br>
+    <p>Ratio of structures in a radius of 20m that burned:</p>
+    <img src="images/masters/burned proportion 20m map - edit.png" alt="ratio of structures within 20m that burned map" width="45%">
+    <img src="images/masters/burned proportion 20m hist.png" alt="ratio of structures within 20m that burned histogram" width="45%"><br>
+    <p>Ratio of structures in a radius of 50m that burned:</p>
+    <img src="images/masters/burned proportion 50m map.png" alt="ratio of structures within 50m that burned map" width="45%">
+    <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="45%"><br>
 
     <h3>Proximity to Vegetation</h3>
     <p>NDVI Derivation</p>
-    <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="45%"><br>
-    <p>Calculate the distance between each structure and an NDVI betweenm 0.3 and 0.8.</p>
+    <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="50%">
+    <img src="images/masters/NDVI legend continuous.png" alt="NDVI legend continuous" width="5%">
+    <br>
+    <p>For each structure, calculate the average distance to a cell with an NDVI between 0.3 and 0.8.</p>
       <ul>
         <li>An NDVI between 0.3 and 0.8 tends to represent brush and trees.</li>
+        <li>The following animation demonstrates the cells captured in the NDVI range of 0.3 to 0.8.<br>
+          <img src="images/masters/ndvi_0.3_to_0.8_example.gif" alt="example of NDVI values in the range 0.3 to 0.8." width="30%">
+          <img src="images/masters/NDVI legend discrete.png" alt="NDVI legend continuous" width="5%">
+        </li>
+        
       </ul>
-    <img src="images/masters/ndvi_distance.png" alt="ndvi distance calculation" width="25%"><br>
+    <img src="images/masters/ndvi_distance - 2.png" alt="ndvi distance calculation" width="25%"><br>
     <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8.</p>
-    <img src="images/masters/mean_ndvi_distribution.png" alt="mean ndvi distribution" width="45%"><br>
+    <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="45%">
+    <img src="images/masters/avg dist to ndvi hist.png" alt="mean ndvi distribution histogram" width="45%"><br>
     <h3>Results</h3>
     <p>Logistic Regression</p>
     <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
