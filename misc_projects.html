@@ -126,6 +126,10 @@
       remained intact. Our goal for this project was to build a model that predicts whether a structure burned in the 2025 Eaton
       Fire based on proximity to nearby burned structures and proximity to vegetation. This project was inspired by the study of Knapp et al. (2021), which analyzed housing arrangement and structure loss in the 2018 Camp Fire.
     </p>
+    <b>Analysis</b>: Python<br>
+    <b>Visualization</b>: QGIS<br>
+    <!-- <a href="https://github.com/natedailey7/eaton-fire-structure-analysis">Code Repository</a> -->
+
     <h2>Feature Engineering</h2>
     <h3>Proximity to Burned Structures</h3>
     <p>Ratio of structures in a radius of 20m that burned:</p>
@@ -163,15 +167,15 @@
     <h3>Results</h3>
     <p><b>Logistic Regression</b></p>
     <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
-    <small>60.9% accuracy, and 0.721 F1-score.<br>
+    <a>60.9% accuracy, and 0.721 F1-score.<br>
       Strongest predictor: NDVI minimum distance. 
-    </small>
+    </a>
     </b>
     <p><b>XG Boost</b></p>
     <img src="images/masters/shap-plot.png" alt="shap plot" width="45%"><br>
-    <small>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
+    <a>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
       Strongest predictor: NDVI mean distance. 
-    </small><br><br>
+    </a><br><br>
     This project provided an initial look at potential factors related to the 2025 Eaton Fire.
     Future work could expand the analysis by trying different models, incorporating additional distance thresholds, or examining building materials and wind patterns. Additionally, perhaps the same process could be run for a different wildfire. 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
