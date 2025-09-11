@@ -36,68 +36,29 @@
     <!-- <object type="text/html" data="flappy_js_test/index.html"></object> -->
 
     
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Raster-Based Wildfire Risk Model in Python</h1>
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Fuel Model for Urban Wildfires</h1>
     <p>
-      My master's project is to create a scriptable wildfire model in Python which calculates rate of spread, fireline intensity, and flame length in a given geographic area.
+      For my master's project, I am developing a fuel model system designed for urban wildfires. Existing models are built around
+      wildland environments and do not adequately represent the diverse and complex fuels present in cities and the WUI. My goal is
+      to fill this gap by creating a model that better characterizes urban fire behavior.
+      <br><br>
+      An urban fuel model could be used to predict standard metrics such as rate of spread, fireline intensity, and flame length in a given geographic area.
       This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
-      <br><small>Timeline: Project to be completed before 2026.</small>
+      <br><br>Timeline: Project to be completed before 2026.
 
       <!-- <img src="images/masters/python-logo.png" alt="Python Logo" width="10%"> -->
     </p>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Motivation</h3>
-    <ul>
-      <li>Wildfires in the U.S. are getting more severe and frequent (Iglesias et al. 2022).</li>
-      <li>In areas like Los Angeles, fires have already destroyed thousands of structures just this year (Qiu et al 2025).</li>
-      <li>The wildland-urban interface (WUI)—where homes meet wildlands—is growing fast. Over 44 million homes are now located in fire-prone WUI areas (Radeloff et al, 2023).</li>
-    </ul>
-    
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pre-fire planning</h3>
-    <ul>
-      <li>Identifying hazardous areas for treatment is essential to reducing wildfire risk.</li>
-      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (mechanical thinning, prescribed burns).</li>
-    </ul>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Existing Tools</h3>
-    <ul>
-      <li>FlamMap and FARSITE:
-        <ul>
-          <li><b>FlamMap</b>: Calculates fire behavior under static conditions.</li>
-          <li><b>FARSITE</b>: Simulates dynamic fire spread over time.</li>
-        </ul>
-      </li>
-      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (mechanical thinning, prescribed burns).</li>
-    </ul>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">My Solution</h3>
-    <p>A scriptable wildfire model built in Python which calculates rate of spread, fireline intensity, and flame length for each pixel.</p>
     <img src="images/masters/stacked-raster-example.png" alt="stacked raster example" width="20%">
     <br><small>Example of a stacked raster representing terrain (Finney 2006).</small>
   </h3>
-    <p>
-      <br>
-      <b>Inputs</b>:
-      <ul>
-      <li>Fuel model raster</li>
-      <li>Slope raster</li>
-      <li>Wind speed</li>
-      <li>Wind direction</li>
-      <li>Fuel moisture</li>
-      </ul>
-      <b>Outputs</b>:
-      <ul>
-      <li>Rate of Spread (m/min)</li>
-      <li>Fireline Intensity (kW/m)</li>
-      <li>Flame Length (m)</li>
-      </ul>
-    </p>
+
     <h3>Project Plan</h3>
     <ul>
-    <li>Build a fuel model lookup system (Scott & Burgan 2005).
+    <li>Build a fuel model lookup system, extending the work of Scott & Burgan 2005.
       <ul>
-        <li>Fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
+        <li>Fuel categories include: fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
         <li>
-          Fuel model examples from Scott & Burgan 2005:<br>
+          Wildland fuel model examples from Scott & Burgan 2005:<br>
           <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
           <img src="images/masters/scott-burgan-2.png" alt="scott-burgan-2" width="25%"><br><br>
         </li>
@@ -105,16 +66,8 @@
     <br>
 
     </li>
-    <li>Implement Rothermel (1972) and Byram (1959) equations in Python.
-      <ul>
-        <li><small>Rothermel outputs: rate of spread</small></li>
-        <li><small>Byram outputs: fireline intensity and flame length</small></li>
-      </ul>
-    </li>
-    <li>Test model and compare results to FlamMap and FARSITE.</li>
-    <li>Collect fuel and LiDAR data for testing.</li>
-    <li>Extension: expand on model to include outputs like crown fire potential, fireline intensity, etc.</li>
-    </ul>
+    <li>Use machine learning and remote sensing techniques to classify urban environments with new fuel model.</li>
+    <li>Use fuel model in wildfire model in order to test effectiveness (Rothermel 1972 and Byram 1959).</li>
 
     <hr>
     <h3><i>Other projects</i>:</h3>
