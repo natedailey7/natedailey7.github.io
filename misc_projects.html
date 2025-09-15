@@ -38,11 +38,10 @@
     
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Fuel Model for Urban Wildfires</h1>
     <p>
-      For my master's project, I am developing a fuel model system designed for urban wildfires. Existing models are built around
-      wildland environments and do not adequately represent the diverse and complex fuels present in cities and the WUI. My goal is
+      Existing models are built around wildland environments and do not adequately represent the diverse and complex fuels present in cities and the WUI. My goal is
       to fill this gap by creating a model that better characterizes urban fire behavior.
       <br><br>
-      An urban fuel model could be used to predict standard metrics such as rate of spread, fireline intensity, and flame length in a given geographic area.
+      An urban fuel model could be used to predict standard fire metrics such as rate of spread, fireline intensity, and flame length in a given geographic area.
       This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
       <br><br>Timeline: Project to be completed before 2026.
 
@@ -54,9 +53,9 @@
 
     <h3>Project Plan</h3>
     <ul>
-    <li>Build a fuel model lookup system, extending the work of Scott & Burgan 2005.
+    <li>Build a custom fuel model lookup system for urban environments, extending the work of Scott & Burgan 2005.
       <ul>
-        <li>Fuel categories include: fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
+        <li><b>Parameters</b>: fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
         <li>
           Wildland fuel model examples from Scott & Burgan 2005:<br>
           <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
@@ -66,8 +65,8 @@
     <br>
 
     </li>
-    <li>Use machine learning and remote sensing techniques to classify urban environments with new fuel model.</li>
-    <li>Use fuel model in wildfire model in order to test effectiveness (Rothermel 1972 and Byram 1959).</li>
+    <li>Use machine learning and remote sensing techniques to classify urban environments with custom fuel model.</li>
+    <li>Input results into wildfire model in order to test effectiveness (Rothermel 1972 and Byram 1959).</li>
 
     <hr>
     <h3><i>Other projects</i>:</h3>
@@ -91,10 +90,10 @@
     <p>Ratio of structures in a radius of 50m that burned:</p>
     <img src="images/masters/burned proportion 50m - edit.png" alt="ratio of structures within 50m that burned map" width="40%">
     <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="40%"><br>
-
+    <br>
     <h3>Proximity to Vegetation</h3>
     <p><b>Step 1</b>:NDVI Derivation</p>
-    NDVI (Normalized Difference Vegetation Index) is an effective way to distinguish vegetation from its background. It works by comparing how much near-infrared light and red light are reflected.<br>
+    NDVI (Normalized Difference Vegetation Index) highlights how much near-infrared light and red light are reflected, providing an effective way to distinguish vegetation from its background.<br>
     <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="50%">
     <img src="images/masters/NDVI legend continuous.png" alt="NDVI legend continuous" width="5%">
     <br>
@@ -108,11 +107,11 @@
         
       </ul>
     <br>
-    Example for calculating the distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
+    E.g. The minimum distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
     <br>
     <img src="images/masters/ndvi_distance - 2.png" alt="ndvi distance calculation" width="25%"><br>
     <ul>
-      <li>We calculated both the minimum distance for each polygon, and the average distance for all points on the polygon.</li>
+      <li>We calculated both the minimum distance for each polygon and the average distance for all points on the polygon.</li>
     </ul>
     <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8:</p>
     <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="40%">
