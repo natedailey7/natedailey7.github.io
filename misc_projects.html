@@ -36,68 +36,28 @@
     <!-- <object type="text/html" data="flappy_js_test/index.html"></object> -->
 
     
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Raster-Based Wildfire Risk Model in Python</h1>
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Fuel Model for Urban Wildfires</h1>
     <p>
-      My master's project is to create a scriptable wildfire model in Python which calculates rate of spread, fireline intensity, and flame length in a given geographic area.
+      Existing models are built around wildland environments and do not adequately represent the diverse and complex fuels present in cities and the WUI. My goal is
+      to fill this gap by creating a model that better characterizes urban fire behavior.
+      <br><br>
+      An urban fuel model could be used to predict standard fire metrics such as rate of spread, fireline intensity, and flame length in a given geographic area.
       This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
-      <br><small>Timeline: Project to be completed before 2026.</small>
+      <br><br>Timeline: Project to be completed before 2026.
 
       <!-- <img src="images/masters/python-logo.png" alt="Python Logo" width="10%"> -->
     </p>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Motivation</h3>
-    <ul>
-      <li>Wildfires in the U.S. are getting more severe and frequent (Iglesias et al. 2022).</li>
-      <li>In areas like Los Angeles, fires have already destroyed thousands of structures just this year (Qiu et al 2025).</li>
-      <li>The wildland-urban interface (WUI)—where homes meet wildlands—is growing fast. Over 44 million homes are now located in fire-prone WUI areas (Radeloff et al, 2023).</li>
-    </ul>
-    
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Pre-fire planning</h3>
-    <ul>
-      <li>Identifying hazardous areas for treatment is essential to reducing wildfire risk.</li>
-      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (mechanical thinning, prescribed burns).</li>
-    </ul>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Existing Tools</h3>
-    <ul>
-      <li>FlamMap and FARSITE:
-        <ul>
-          <li><b>FlamMap</b>: Calculates fire behavior under static conditions.</li>
-          <li><b>FARSITE</b>: Simulates dynamic fire spread over time.</li>
-        </ul>
-      </li>
-      <li>Wildfire models can be used as a technical process for prioritizing treatment areas (mechanical thinning, prescribed burns).</li>
-    </ul>
-
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">My Solution</h3>
-    <p>A scriptable wildfire model built in Python which calculates rate of spread, fireline intensity, and flame length for each pixel.</p>
     <img src="images/masters/stacked-raster-example.png" alt="stacked raster example" width="20%">
     <br><small>Example of a stacked raster representing terrain (Finney 2006).</small>
   </h3>
-    <p>
-      <br>
-      <b>Inputs</b>:
-      <ul>
-      <li>Fuel model raster</li>
-      <li>Slope raster</li>
-      <li>Wind speed</li>
-      <li>Wind direction</li>
-      <li>Fuel moisture</li>
-      </ul>
-      <b>Outputs</b>:
-      <ul>
-      <li>Rate of Spread (m/min)</li>
-      <li>Fireline Intensity (kW/m)</li>
-      <li>Flame Length (m)</li>
-      </ul>
-    </p>
+
     <h3>Project Plan</h3>
     <ul>
-    <li>Build a fuel model lookup system (Scott & Burgan 2005).
+    <li>Build a custom fuel model lookup system for urban environments, extending the work of Scott & Burgan 2005.
       <ul>
-        <li>Fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
+        <li><b>Parameters</b>: fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
         <li>
-          Fuel model examples from Scott & Burgan 2005:<br>
+          Wildland fuel model examples from Scott & Burgan 2005:<br>
           <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
           <img src="images/masters/scott-burgan-2.png" alt="scott-burgan-2" width="25%"><br><br>
         </li>
@@ -105,16 +65,8 @@
     <br>
 
     </li>
-    <li>Implement Rothermel (1972) and Byram (1959) equations in Python.
-      <ul>
-        <li><small>Rothermel outputs: rate of spread</small></li>
-        <li><small>Byram outputs: fireline intensity and flame length</small></li>
-      </ul>
-    </li>
-    <li>Test model and compare results to FlamMap and FARSITE.</li>
-    <li>Collect fuel and LiDAR data for testing.</li>
-    <li>Extension: expand on model to include outputs like crown fire potential, fireline intensity, etc.</li>
-    </ul>
+    <li>Use machine learning and remote sensing techniques to classify urban environments with custom fuel model.</li>
+    <li>Input results into wildfire model in order to test effectiveness (Rothermel 1972 and Byram 1959).</li>
 
     <hr>
     <h3><i>Other projects</i>:</h3>
@@ -126,18 +78,22 @@
       remained intact. Our goal for this project was to build a model that predicts whether a structure burned in the 2025 Eaton
       Fire based on proximity to nearby burned structures and proximity to vegetation. This project was inspired by the study of Knapp et al. (2021), which analyzed housing arrangement and structure loss in the 2018 Camp Fire.
     </p>
+    <b>Analysis</b>: Python<br>
+    <b>Visualization</b>: QGIS<br>
+    <!-- <a href="https://github.com/natedailey7/eaton-fire-structure-analysis">Code Repository</a> -->
+
     <h2>Feature Engineering</h2>
     <h3>Proximity to Burned Structures</h3>
     <p>Ratio of structures in a radius of 20m that burned:</p>
-    <img src="images/masters/burned proportion 20m map - edit.png" alt="ratio of structures within 20m that burned map" width="40%">
+    <img src="images/masters/burned proportion 20m - edit.png" alt="ratio of structures within 20m that burned map" width="40%">
     <img src="images/masters/burned proportion 20m hist.png" alt="ratio of structures within 20m that burned histogram" width="40%"><br>
     <p>Ratio of structures in a radius of 50m that burned:</p>
-    <img src="images/masters/burned proportion 50m map.png" alt="ratio of structures within 50m that burned map" width="40%">
+    <img src="images/masters/burned proportion 50m - edit.png" alt="ratio of structures within 50m that burned map" width="40%">
     <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="40%"><br>
-
+    <br>
     <h3>Proximity to Vegetation</h3>
     <p><b>Step 1</b>:NDVI Derivation</p>
-    NDVI (Normalized Difference Vegetation Index) is an effective way to distinguish vegetation from its background. It works by comparing how much near-infrared light and red light are reflected.<br>
+    NDVI (Normalized Difference Vegetation Index) highlights how much near-infrared light and red light are reflected, providing an effective way to distinguish vegetation from its background.<br>
     <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="50%">
     <img src="images/masters/NDVI legend continuous.png" alt="NDVI legend continuous" width="5%">
     <br>
@@ -151,11 +107,11 @@
         
       </ul>
     <br>
-    Example for calculating the distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
+    E.g. The minimum distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
     <br>
     <img src="images/masters/ndvi_distance - 2.png" alt="ndvi distance calculation" width="25%"><br>
     <ul>
-      <li>We calculated both the minimum distance for each polygon, and the average distance for all points on the polygon.</li>
+      <li>We calculated both the minimum distance for each polygon and the average distance for all points on the polygon. We found the average distance to be a more robust predictor.</li>
     </ul>
     <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8:</p>
     <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="40%">
@@ -163,16 +119,16 @@
     <h3>Results</h3>
     <p><b>Logistic Regression</b></p>
     <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
-    <small>60.9% accuracy, and 0.721 F1-score.<br>
+    <a>60.9% accuracy, and 0.721 F1-score.<br>
       Strongest predictor: NDVI minimum distance. 
-    </small>
+    </a>
     </b>
     <p><b>XG Boost</b></p>
     <img src="images/masters/shap-plot.png" alt="shap plot" width="45%"><br>
-    <small>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
+    <a>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
       Strongest predictor: NDVI mean distance. 
-    </small><br><br>
-    This project provided an initial look at potential factors related to the 2025 Eaton Fire.
+    </a><br><br>
+    This project provided an initial look at potential housing and vegetation arrangement factors related to the 2025 Eaton Fire.
     Future work could expand the analysis by trying different models, incorporating additional distance thresholds, or examining building materials and wind patterns. Additionally, perhaps the same process could be run for a different wildfire. 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
