@@ -5,7 +5,7 @@ let frame = 0;
 setInterval(function () {
     const frameOffset = (++frame % frames) * -frameHeight;
     yoyo.style.backgroundPosition = frameOffset + "px " + "0px";
-}, 200);
+}, 250);
 
 const frameHeight2 = 128;
 const frames2 = 3;
@@ -17,4 +17,4 @@ setInterval(function () {
     const frameOffset2 = (11 + (++frame2 % frames2)) * -frameHeight2;
 
     sun.style.backgroundPosition = frameOffset2 + "px " + "0px";
-}, 150);
+}, 333);
