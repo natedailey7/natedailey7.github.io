@@ -33,102 +33,39 @@
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
 
-    <!-- <object type="text/html" data="flappy_js_test/index.html"></object> -->
-
-  <!--
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16"><i>Master's Project</i>: Fuel Model for Urban Wildfires</h1>
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure-Level Fire Risk Model for Palisades and Eaton Fires</h1>
     <p>
-      Existing models are built around wildland environments and do not adequately represent the diverse and complex fuels present in cities and the WUI. My goal is
-      to fill this gap by creating a model that better characterizes urban fire behavior.
+      This is my culminating project as part of my master's in data science and analytics. The problem statement of the project is as follows:
       <br><br>
-      An urban fuel model could be used to predict standard fire metrics such as rate of spread, fireline intensity, and flame length in a given geographic area.
-      This information could be used to help communities assess their fire risk by informing where to prioritize fire breaks or controlled burns.
-      <br><br>Timeline: Project to be completed before 2026.
-
+      This project builds a structure-level urban fire model retrospectively for the 2025 Eaton and Palisades fires in order to better understand the factors that contributed to the destructiveness of these fires.
+      The models in this study account for factors such as structure density, presence of vegetation, topography, structure age and wind alignment for predicting how a given structure fared in the respective conflagration. 
     </p>
-    <img src="images/masters/stacked-raster-example.png" alt="stacked raster example" width="20%">
-    <br><small>Example of a stacked raster representing terrain (Finney 2006).</small>
-  </h3>
 
-    <h3>Project Plan</h3>
-    <ul>
-    <li>Build a custom fuel model lookup system for urban environments, extending the work of Scott & Burgan 2005.
-      <ul>
-        <li><b>Parameters</b>: fuel load by category (live vs. dead fuels), particle size class, surface-area-to-volume (SAV) ratio, heat content, fuel bed depth, and dead fuel moisture of extinction</li>
-        <li>
-          Wildland fuel model examples from Scott & Burgan 2005:<br>
-          <img src="images/masters/scott-burgan-1.png" alt="scott-burgan-1" width="25%">
-          <img src="images/masters/scott-burgan-2.png" alt="scott-burgan-2" width="25%"><br><br>
-        </li>
-      </ul>
-    <br>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton and Palisades Fires damage maps (respectively)</h3>
 
-    </li>
-    <li>Use machine learning and remote sensing techniques to classify urban environments with custom fuel model.</li>
-    <li>Input results into wildfire model in order to test effectiveness (Rothermel 1972 and Byram 1959).</li>
+    <img src="images/masters_project/eaton map.png" alt="eaton_map" width="37%">
+    <img src="images/masters_project/palisades map.png" alt="palisades_map" width="37%">
 
-    <hr>
-    <h3><i>Other projects</i>:</h3>
-    <hr>
-  -->
-    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire Structure Analysis</h1>
-    <p>
-      The Eaton Fire occurred in January 2025 near Altadena, California. The fire destroyed over 9,000 structures, while others in close proximity to the flames
-      remained intact. Our goal for this project was to build a model that predicts whether a structure burned in the 2025 Eaton
-      Fire based on proximity to nearby burned structures and proximity to vegetation. This project was inspired by the study of Knapp et al. (2021), which analyzed housing arrangement and structure loss in the 2018 Camp Fire.
-    </p>
-    <b>Analysis</b>: Python<br>
-    <b>Visualization</b>: QGIS<br>
-    <!-- <a href="https://github.com/natedailey7/eaton-fire-structure-analysis">Code Repository</a> -->
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Explanatory variables:</h2>
 
-    <h2>Feature Engineering</h2>
-    <h3>Proximity to Burned Structures</h3>
-    <p>Ratio of structures in a radius of 20m that burned:</p>
-    <img src="images/masters/burned proportion 20m - edit.png" alt="ratio of structures within 20m that burned map" width="40%">
-    <img src="images/masters/burned proportion 20m hist.png" alt="ratio of structures within 20m that burned histogram" width="40%"><br>
-    <p>Ratio of structures in a radius of 50m that burned:</p>
-    <img src="images/masters/burned proportion 50m - edit.png" alt="ratio of structures within 50m that burned map" width="40%">
-    <img src="images/masters/burned proportion 50m hist.png" alt="ratio of structures within 50m that burned histogram" width="40%"><br>
-    <br>
-    <h3>Proximity to Vegetation</h3>
-    <p><b>Step 1</b>:NDVI Derivation</p>
-    NDVI (Normalized Difference Vegetation Index) highlights how much near-infrared light and red light are reflected, providing an effective way to distinguish vegetation from its background.<br>
-    <img src="images/masters/ndvi_derivation.png" alt="ndvi" width="50%">
-    <img src="images/masters/NDVI legend continuous.png" alt="NDVI legend continuous" width="5%">
-    <br>
-    <p><b>Step 2</b>:Calculate the distance between each structure and an NDVI between 0.3 and 0.8.</p>
-      <ul>
-        <li>An NDVI between 0.3 and 0.8 tends to represent brush and trees.</li>
-        <li>The following animation demonstrates the cells captured in the NDVI range of 0.3 to 0.8.<br>
-          <img src="images/masters/ndvi_0.3_to_0.8_example.gif" alt="example of NDVI values in the range 0.3 to 0.8." width="30%">
-          <img src="images/masters/NDVI legend discrete.png" alt="NDVI legend continuous" width="5%">
-        </li>
-        
-      </ul>
-    <br>
-    E.g. The minimum distance between a structure polygon and a NDVI cell with a value 0.3-0.8:
-    <br>
-    <img src="images/masters/ndvi_distance - 2.png" alt="ndvi distance calculation" width="25%"><br>
-    <ul>
-      <li>We calculated both the minimum distance for each polygon and the average distance for all points on the polygon. We found the average distance to be a more robust predictor.</li>
-    </ul>
-    <p>Distribution of mean distance between structure and an NDVI between 0.3 and 0.8:</p>
-    <img src="images/masters/avg dist to ndvi.png" alt="mean ndvi distribution" width="40%">
-    <img src="images/masters/avg dist to ndvi hist.png" alt="mean ndvi distribution histogram" width="40%"><br>
-    <h3>Results</h3>
-    <p><b>Logistic Regression</b></p>
-    <img src="images/masters/logistic-regression-results-eaton.png" alt="logistic regression results" width="55%"><br>
-    <a>60.9% accuracy, and 0.721 F1-score.<br>
-      Strongest predictor: NDVI minimum distance. 
-    </a>
-    </b>
-    <p><b>XG Boost</b></p>
-    <img src="images/masters/shap-plot.png" alt="shap plot" width="45%"><br>
-    <a>86% accuracy, 0.93 AUC, and 0.86 F1-score.<br>
-      Strongest predictor: NDVI mean distance. 
-    </a><br><br>
-    This project provided an initial look at potential housing and vegetation arrangement factors related to the 2025 Eaton Fire.
-    Future work could expand the analysis by trying different models, incorporating additional distance thresholds, or examining building materials and wind patterns. Additionally, perhaps the same process could be run for a different wildfire. 
+    Structure density<br>
+    <img src="images/masters_project/structures within 250ft.png" alt="structures within 250ft" width="37%"><br><br>
+    <img src="images/masters_project/ndvi 0.2-0.8 within 250ft.png" alt="ndvi 0.2-0.8 within 250ft" width="37%"><br>
+    <img src="images/masters_project/year built.png" alt="year_built" width="37%"><br>
+    <img src="images/masters_project/upslope wedge.png" alt="upslope_wedge" width="37%"><br>
+    <img src="images/masters_project/wedge length examples.png" alt="wedge length examples" width="37%"><br>
+    <img src="images/masters_project/structures in 250ft NE wedge.png" alt="structures in 250ft NE wedge" width="37%"><br>
+    <img src="images/masters_project/NDVI in 250ft NE wedge.png" alt="NDVI in 250ft NE wedge" width="37%"><br>
+
+    <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Results</h2>
+
+    <img src="images/masters_project/eaton xg boost results.png" alt="eaton_xgboost_results" width="25%"><br>
+    <img src="images/masters_project/eaton shap.png" alt="eaton_shap" width="37%"><br>
+
+    <img src="images/masters_project/palisades xg boost results.png" alt="palisades_xgboost_results" width="25%"><br>
+    <img src="images/masters_project/palisades shap.png" alt="palisades_shap" width="37%"><br>
+
+
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
       Fall 2020-May 2021, I worked at the <i>Formal Analysis of Interactive Media (FAIM) Lab</i> at Pomona College.
