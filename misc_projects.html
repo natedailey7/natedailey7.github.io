@@ -35,7 +35,7 @@
 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure-Level Risk Model for Palisades and Eaton Fires</h1>
     <p>
-      This is an overview of my culminating project for my master's in data science and analytics (paper to be submitted in Spring 2026).
+      This is an overview of my culminating project for my master's degree in data science and analytics (paper to be submitted in Spring 2026). Figures below are draft versions.
     </p>
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Problem statement</h4>
     This project builds structure-level models for the 2025 Eaton and Palisades fires to better understand the factors that contributed to their destructiveness.
@@ -45,17 +45,17 @@
 
     <img src="images/masters_project/eaton map.png" alt="eaton_map" width="37%">
     <img src="images/masters_project/palisades map.png" alt="palisades_map" width="37%"><br><br>
-    Eaton Fire: 9,413 structures; 14,021 acres burned.<br>
-    Palisades Fire: 6,833 structures; 23,707 acres burned.
+    Eaton Fire: 14,021 acres and 9,413 structures burned.<br>
+    Palisades Fire: 23,707 acres and 6,833 structures burned.
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Explanatory variables:</h2>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density</h4>
     Number of structures in radii of 250, 500, and 1000 ft. Example image demonstrates the 250ft radius.<br>
-    <img src="images/masters_project/structures within 250ft.png" alt="structures within 250ft" width="35%"><br><br>
+    <img src="images/masters_project/structures within 250ft.png" alt="structures within 250ft" width="33%"><br><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vegetation Density</h4>
-    Ratio of NDVI in the range 0.2-0.8 within radii of 250, 500, and 1000 ft. Example image demonstrates the 250ft radius.<br>
+    Ratio of NDVI in given range within radii of 250, 500, and 1000 ft. Ranges of 0.2-0.8 and 0.3-0.8 used. Example image demonstrates the ratio of pixels in the 0.2-0.8 range within a 250ft radius.<br>
     <img src="images/masters_project/ndvi 0.2-0.8 within 250ft.png" alt="ndvi 0.2-0.8 within 250ft" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Year Built</h4>
@@ -63,7 +63,7 @@
     <img src="images/masters_project/year built.png" alt="year_built" width="32%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slope</h4>
-    For each structure, a wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure, excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. Example image shows mean slope in wedge.<br>
+    For each structure, a wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. Example image shows mean slope in wedge.<br>
     <img src="images/masters_project/upslope wedge.png" alt="upslope_wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density in northeast</h4>
@@ -77,16 +77,18 @@
     <img src="images/masters_project/NDVI in 250ft NE wedge.png" alt="NDVI in 250ft NE wedge" width="37%"><br>
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Results</h2>
-    XGBoost was used with derived variables in order to predict whether structures burned.
+    XGBoost was used to predict whether structures burned.
 
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/eaton xg boost results.png" alt="eaton_xgboost_results" width="25%"><br><br>
+    SHAP Plot:<br>
     <img src="images/masters_project/eaton shap.png" alt="eaton_shap" width="45%"><br>
 
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Palisades Fire</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/palisades xg boost results.png" alt="palisades_xgboost_results" width="25%"><br><br>
+    SHAP Plot:<br>
     <img src="images/masters_project/palisades shap.png" alt="palisades_shap" width="45%"><br><br>
 
     Overall, structure density, structure area, vegetation density, and year built were among the most influential factors.
@@ -114,7 +116,7 @@
     <p>
         Triumvirate Arena is a battle card game featuring three players: Nate, Chloe, and Grace. Each player type has three
         signature moves which might increase or decrease your health/mana, and/or do damage to the other player. The goal of
-        this two player game is to reduce the opponent to zero health. This project was part of the Spring 2022 Game Engine Programming class at Pomona College. 
+        this two player game is to reduce the opponent's health to zero. This project was part of the Spring 2022 Game Engine Programming class at Pomona College. 
     </p>
     <p>
         We wrote Triumvirate Arena in Rust, completely from scratch, without a pre-made game engine (using Bitblt and Vulkan shaders). In our team of 3 (myself, Chloe,
@@ -158,7 +160,7 @@
   </p><p>
       In JumpyBall, I primarily worked on asset creation and the collision system. I created all of the 3D models in Blender 
       and wrote a Python script to create a set of bounding boxes for objects on the map (used for collision system). This project
-      was also part of the spring 2022 Game Engine Programming class at Pomona College.
+      was also part of the Spring 2022 Game Engine Programming class at Pomona College.
   </p>
   <br>
   
@@ -210,7 +212,7 @@
   <img src="images/ebay_logo_cropped.jpg" alt="ebay_logo.png" width="25%">
   <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">eBay Delivery Prediction Project</h1>
   <p>
-    During fall 2021, I worked in a team of 5 to create a neural network that predicts the delivery time of items sold on eBay (based on features such as declared handling days,
+    During Fall 2021, I worked in a team of 5 to create a neural network that predicts the delivery time of items sold on eBay (based on features such as declared handling days,
     item category, weight, etc.). 
   </p>
   <p>
@@ -222,16 +224,6 @@
   </p>
   <a href="https://milliemince.github.io/eBay-shipping-predictions/">Standalone website</a><br>
   <a href="https://github.com/milliemince/eBay-shipping-predictions">Repository</a><br>
-
-  <hr>
-<!-- 
-  <h1>LiDAR Paper</h1>
-  <p>As a part of my computer science senior seminar in Fall 2022, I wrote a paper on
-    <b>LiDAR and machine learning</b>. See the abstract below. 
-    <p><a href="/other_content/190_Final_Paper.pdf">(click here to download the full paper)</a></p>
-  </p>
-  <img src="images/LiDAR_abstract.png" alt="LiDAR_abstract" width="40%" class="center">
-  <br><br><br>   -->
 
 <hr>
 
