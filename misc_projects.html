@@ -35,7 +35,7 @@
 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure-Level Risk Model for Palisades and Eaton Fires</h1>
     <p>
-      This is an overview of my culminating project for my master's degree in data science and analytics (paper to be submitted in Spring 2026). Figures below are draft versions.
+      This is an overview of my culminating project for my master's degree in data science and analytics (paper to be submitted in Spring 2026). Figures are draft versions.
     </p>
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Problem statement</h4>
     This project builds structure-level models for the 2025 Eaton and Palisades fires to better understand the factors that contributed to their destructiveness.
@@ -51,7 +51,7 @@
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Explanatory variables:</h2>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density</h4>
-    Number of structures in radii of 250, 500, and 1000 ft. Example image demonstrates the 250ft radius.<br>
+    Number of neighboring structures within 250, 500, and 1,000 ft of each structure. Example image demonstrates the 250ft radius.<br>
     <img src="images/masters_project/structures within 250ft.png" alt="structures within 250ft" width="33%"><br><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vegetation Density</h4>
@@ -63,29 +63,29 @@
     <img src="images/masters_project/year built.png" alt="year_built" width="32%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slope</h4>
-    For each structure, a wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. Example image shows mean slope in wedge.<br>
+    For each structure, a 90° wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. The mean is shown in the example image, which also includes two visual examples of the wedges used for calculations.<br>
     <img src="images/masters_project/upslope wedge.png" alt="upslope_wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density in northeast</h4>
-    Northeast wedge is meant to account for Santa Anna winds during the fires (ember casting).
+    Northeast 45° wedge is meant to account for Santa Anna winds during the fires (ember casting).
     There are different features for wedge lengths of 250, 500, and 1000 ft. Example demonstrates the number of structures in the 250ft wedge.<br>
     <!-- <img src="images/masters_project/wedge length examples.png" alt="wedge length examples" width="24%"><br> -->
     <img src="images/masters_project/structures in 250ft NE wedge.png" alt="structures in 250ft NE wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vegetation in northeast</h4>
-    Ratio of NDVI in the range 0.2-0.8 in northeast wedge with lengths of 250, 500, and 1000 ft. Example demonstrates 250ft wedge.<br>
+    Ratio of NDVI in the range 0.2-0.8 in 45° northeast wedge with lengths of 250, 500, and 1000 ft. Example demonstrates 250ft wedge.<br>
     <img src="images/masters_project/NDVI in 250ft NE wedge.png" alt="NDVI in 250ft NE wedge" width="37%"><br>
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Results</h2>
     XGBoost was used to predict whether structures burned.
 
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire</h3>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire Results</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/eaton xg boost results.png" alt="eaton_xgboost_results" width="25%"><br><br>
     SHAP Plot:<br>
     <img src="images/masters_project/eaton shap.png" alt="eaton_shap" width="45%"><br>
 
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Palisades Fire</h3>
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Palisades Fire Results</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/palisades xg boost results.png" alt="palisades_xgboost_results" width="25%"><br><br>
     SHAP Plot:<br>
