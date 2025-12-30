@@ -53,11 +53,11 @@
     a zoomed-in view of a small subset of structures, shown to convey the typical range and spatial variability of each metric.
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density</h4>
-    Number of neighboring structures within 250, 500, and 1,000 ft of each structure. Example image uses 250ft radius.<br>
+    Number of neighboring structures within 250, 500, and 1,000 ft of each structure. Example figure uses 250ft radius.<br>
     <img src="images/masters_project/structures within 250ft.png" alt="structures within 250ft" width="33%"><br><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vegetation Density</h4>
-    Ratio of NDVI in given range within radii of 250, 500, and 1000 ft. Ranges of 0.2-0.8 and 0.3-0.8 used. Example image demonstrates the ratio of pixels in the 0.2-0.8 range within a 250ft radius.<br>
+    Ratio of NDVI in given range within radii of 250, 500, and 1000 ft. Ranges of 0.2-0.8 and 0.3-0.8 used. Example figure demonstrates the ratio of pixels in the 0.2-0.8 range within a 250ft radius.<br>
     <img src="images/masters_project/ndvi 0.2-0.8 within 250ft.png" alt="ndvi 0.2-0.8 within 250ft" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Year Built</h4>
@@ -65,17 +65,18 @@
     <img src="images/masters_project/year built.png" alt="year_built" width="32%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slope</h4>
-    This variable accounts for the tendency of fire to spread uphill. For each structure, a 90° wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. The mean is shown in the example image, which also includes two visual examples of the wedges used for calculations.<br>
+    This variable accounts for the tendency of fire to spread uphill. For each structure, a 90° wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. The mean is shown in the figure, which also includes two visual examples of the wedges used for calculations.<br>
     <img src="images/masters_project/upslope wedge.png" alt="upslope_wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density in northeast</h4>
-    Northeast 45° wedge is meant to account for Santa Anna winds during the fires (ember casting).
-    There are different features for wedge lengths of 250, 500, and 1000 ft. Example demonstrates the number of structures in the 250ft wedge.<br>
+    This variable accounts for ember casting from other structures via Santa Anna winds.
+    It represents the number of structures in the northeast 45° wedge for each structure.
+    There are different features for wedge lengths of 250, 500, and 1000 ft. Figure demonstrates the number of structures in the 250ft wedge.<br>
     <!-- <img src="images/masters_project/wedge length examples.png" alt="wedge length examples" width="24%"><br> -->
     <img src="images/masters_project/structures in 250ft NE wedge.png" alt="structures in 250ft NE wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Vegetation in northeast</h4>
-    Ratio of NDVI in the range 0.2-0.8 in 45° northeast wedge with lengths of 250, 500, and 1000 ft. Example demonstrates 250ft wedge.<br>
+    Ratio of NDVI in the range 0.2-0.8 in 45° northeast wedge, which represents ember casting from vegetation. Wedge lengths are 250, 500, and 1000 ft. Figure demonstrates 250ft wedge.<br>
     <img src="images/masters_project/NDVI in 250ft NE wedge.png" alt="NDVI in 250ft NE wedge" width="37%"><br>
 
     <h2 class="w3-border-bottom w3-border-light-grey w3-padding-16">Results</h2>
@@ -102,7 +103,7 @@
 
     <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Mappy</h1>
     <p>
-      Fall 2020 through May 2021, I worked at the Formal Analysis of Interactive Media (FAIM) Lab at Pomona College.
+      During August 2021 - May 2022, I worked at the Formal Analysis of Interactive Media (FAIM) Lab at Pomona College.
       I assisted in the development of <i>Mappy</i>, a Rust program which interprets pixel data from emulated Nintendo
       NES games. Mappy's main feature is to produce game maps, linking together different levels and rooms. I specifically
       worked on Sprite Blobbing and Avatar Detection features, which involve tracking game sprites and grouping them
