@@ -65,7 +65,7 @@
     <img src="images/masters_project/year built.png" alt="year_built" width="32%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Slope</h4>
-    This variable accounts for the tendency of fire to spread uphill. For each structure, a 90° wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the structure. The mean, max, and 90th percentile values of slope within this wedge are used as features. The mean is shown in the figure, which also includes two visual examples of the wedges used for calculations.<br>
+    This variable accounts for the tendency of fire to spread uphill. For each structure, a 90° wedge is defined in the upslope direction, extending 100 ft from lower to higher elevation toward the structure and excluding the first 15 ft adjacent to the building. The mean, max, and 90th percentile values of slope within this wedge are used as features. The mean is shown in the figure, which also includes two visual examples of the wedges used for calculations.<br>
     <img src="images/masters_project/upslope wedge.png" alt="upslope_wedge" width="37%"><br>
 
     <h4 class="w3-border-bottom w3-border-light-grey w3-padding-16">Structure density in northeast</h4>
@@ -85,13 +85,14 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Eaton Fire Results</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/eaton xg boost results.png" alt="eaton_xgboost_results" width="25%"><br><br>
-    SHAP Plot:<br>
-    <img src="images/masters_project/eaton shap.png" alt="eaton_shap" width="45%"><br>
-
+    <h4>SHAP Plot:</h4>
+    Note that the SHAP value (x-axis) represents the impact of each feature on the model output (0 or 1, i.e., whether a structure survived or burned).
+    <img src="images/masters_project/eaton shap.png" alt="eaton_shap" width="45%"><br><br>
+    
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Palisades Fire Results</h3>
     0 = survived, 1 = burned<br><br>
     <img src="images/masters_project/palisades xg boost results.png" alt="palisades_xgboost_results" width="25%"><br><br>
-    SHAP Plot:<br>
+    <h4>SHAP Plot:</h4>
     <img src="images/masters_project/palisades shap.png" alt="palisades_shap" width="45%"><br><br>
 
     Overall, structure density, structure area, vegetation density, and year built were among the most influential factors.
